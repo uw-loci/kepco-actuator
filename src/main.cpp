@@ -29,7 +29,7 @@ void watchdog_early_init(void) {
 
 void writeServoDegrees(float degrees);
 void updateTriggerInput();
-void handleTriggerShortedToGround();
+void runServoSequence();
 
 void setup() {
   // Initialize the servo and trigger input before enabling the watchdog.
@@ -70,13 +70,13 @@ void updateTriggerInput() {
     stableTriggerState = triggerReading;
 
     if (stableTriggerState == LOW) {
-      handleTriggerShortedToGround();
+      runServoSequence();
     }
   }
 }
 
-void handleTriggerShortedToGround() {
-  // Run the actuator sequence after the trigger has been shorted to ground.
+void runServoSequence() {
+  // Run the actuator sequence: up, wait, down, wait
   writeServoDegrees(0.0f); // move to 0 degrees - TODO: change degrees number
   delay(1000); // hold for 1 second - TODO: change duration
   writeServoDegrees(0.0f); // move to 0 degrees - TODO: change degrees number
