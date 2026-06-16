@@ -35,7 +35,7 @@ void setup() {
   // Initialize the servo and trigger input before enabling the watchdog.
   actuatorServo.attach(SERVO_PIN, SERVO_MIN_PULSE_US, SERVO_MAX_PULSE_US);
   pinMode(TRIGGER_PIN, INPUT_PULLUP);
-  writeServoDegrees(SERVO_RANGE_DEGREES / 2.0f);  // TODO: start at middle?
+  writeServoDegrees(90.0f);  // start at 90 degrees
 
   // Reset the board if firmware stops servicing the watchdog for 4 seconds.
   wdt_enable(WDTO_4S);
@@ -77,8 +77,8 @@ void updateTriggerInput() {
 
 void runServoSequence() {
   // Run the actuator sequence: up, wait, down, wait
-  writeServoDegrees(0.0f); // move to 0 degrees - TODO: change degrees number
+  writeServoDegrees(150.0f); // move to 150 degrees - testing found 60 degrees to be best range of motion
   delay(1000); // hold for 1 second - TODO: change duration
-  writeServoDegrees(0.0f); // move to 0 degrees - TODO: change degrees number
+  writeServoDegrees(90.0f); // move back to 90 degrees 
   delay(1000); // hold for 1 second - TODO: change duration
 }
