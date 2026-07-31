@@ -15,9 +15,10 @@ to ground. A servo is selected only after the button is released:
 - Only one complete servo sequence can run at a time. A release is ignored if
   either servo is in its active-hold or rest-hold phase.
 
-Each default sequence moves from 90 degrees to 150 degrees, holds for 1 second,
-returns to 90 degrees, and remains in its rest-hold phase for 1 second before
-the sequence becomes idle.
+The Kepco sequence moves from 90 degrees to 150 degrees, while the Glassman
+sequence moves from 0 degrees to 100 degrees. Each servo holds its active
+position for 1 second, returns to its rest position, and remains in its
+rest-hold phase for 1 second before the sequence becomes idle.
 
 ## Wiring
 
@@ -43,8 +44,8 @@ independently.
 | Minimum pulse | 500 us | 1000 us |
 | Maximum pulse | 2500 us | 2000 us |
 | Configured range | 270 degrees | 150 degrees |
-| Rest position | 90 degrees | 90 degrees |
-| Active position | 150 degrees | 150 degrees |
+| Rest position | 90 degrees | 0 degrees |
+| Active position | 150 degrees | 100 degrees |
 | Active hold | 1000 ms | 1000 ms |
 | Rest hold | 1000 ms | 1000 ms |
 

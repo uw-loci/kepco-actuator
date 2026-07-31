@@ -11,8 +11,8 @@ constexpr uint8_t TRIGGER_BUTTON_PIN = 2;   // Arduino Uno D2 to button, using I
 constexpr int KEPCO_SERVO_MIN_PULSE_US = 500;
 constexpr int KEPCO_SERVO_MAX_PULSE_US = 2500;
 constexpr float KEPCO_SERVO_RANGE_DEGREES = 270.0f;
-constexpr float KEPCO_SERVO_REST_DEGREES = 0.0f;
-constexpr float KEPCO_SERVO_ACTIVE_DEGREES = 100.0f;
+constexpr float KEPCO_SERVO_REST_DEGREES = 90.0f;
+constexpr float KEPCO_SERVO_ACTIVE_DEGREES = 150.0f;
 constexpr unsigned long KEPCO_SERVO_ACTIVE_HOLD_MS = 1000;
 constexpr unsigned long KEPCO_SERVO_REST_HOLD_MS = 1000;
 
@@ -22,8 +22,8 @@ constexpr unsigned long KEPCO_SERVO_REST_HOLD_MS = 1000;
 constexpr int GLASSMAN_SERVO_MIN_PULSE_US = 1000;
 constexpr int GLASSMAN_SERVO_MAX_PULSE_US = 2000;
 constexpr float GLASSMAN_SERVO_RANGE_DEGREES = 150.0f;
-constexpr float GLASSMAN_SERVO_REST_DEGREES = 90.0f;
-constexpr float GLASSMAN_SERVO_ACTIVE_DEGREES = 150.0f;
+constexpr float GLASSMAN_SERVO_REST_DEGREES = 0.0f;
+constexpr float GLASSMAN_SERVO_ACTIVE_DEGREES = 100.0f;
 constexpr unsigned long GLASSMAN_SERVO_ACTIVE_HOLD_MS = 1000;
 constexpr unsigned long GLASSMAN_SERVO_REST_HOLD_MS = 1000;
 
