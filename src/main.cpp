@@ -22,8 +22,8 @@ constexpr unsigned long KEPCO_SERVO_REST_HOLD_MS = 1000;
 constexpr int GLASSMAN_SERVO_MIN_PULSE_US = 1000;
 constexpr int GLASSMAN_SERVO_MAX_PULSE_US = 2000;
 constexpr float GLASSMAN_SERVO_RANGE_DEGREES = 150.0f;
-constexpr float GLASSMAN_SERVO_REST_DEGREES = 0.0f;
-constexpr float GLASSMAN_SERVO_ACTIVE_DEGREES = 100.0f;
+constexpr float GLASSMAN_SERVO_REST_DEGREES = 70.0f;
+constexpr float GLASSMAN_SERVO_ACTIVE_DEGREES = 40.0f;
 constexpr unsigned long GLASSMAN_SERVO_ACTIVE_HOLD_MS = 1000;
 constexpr unsigned long GLASSMAN_SERVO_REST_HOLD_MS = 1000;
 
