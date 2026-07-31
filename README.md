@@ -8,7 +8,8 @@ one pushbutton.
 The pushbutton uses the Uno's internal pullup resistor, so a press connects D2
 to ground. A servo is selected only after the button is released:
 
-- A press shorter than 5 seconds runs the Kepco servo sequence.
+- A press of 1 second or less runs the Kepco servo sequence.
+- A press longer than 1 second but shorter than 5 seconds does nothing.
 - A press of 5 seconds or longer runs the Glassman servo sequence.
 - Both press and release transitions must remain stable for 50 ms before they
   are accepted.

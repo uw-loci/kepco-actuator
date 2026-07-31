@@ -27,8 +27,9 @@ constexpr float GLASSMAN_SERVO_ACTIVE_DEGREES = 100.0f;
 constexpr unsigned long GLASSMAN_SERVO_ACTIVE_HOLD_MS = 1000;
 constexpr unsigned long GLASSMAN_SERVO_REST_HOLD_MS = 1000;
 
-// A stable release selects the servo from the debounced press duration.
+// A stable release selects an action from the debounced press duration.
 constexpr unsigned long BUTTON_DEBOUNCE_MS = 50;
+constexpr unsigned long KEPCO_MAX_PRESS_MS = 1000;
 constexpr unsigned long GLASSMAN_PRESS_THRESHOLD_MS = 5000;
 
 enum class ServoSequencePhase : uint8_t {
@@ -169,7 +170,7 @@ void updateButton(unsigned long nowMs) {
 
   if (pressDurationMs >= GLASSMAN_PRESS_THRESHOLD_MS) {
     startGlassmanSequence(nowMs);
-  } else {
+  } else if (pressDurationMs <= KEPCO_MAX_PRESS_MS) {
     startKepcoSequence(nowMs);
   }
 }
